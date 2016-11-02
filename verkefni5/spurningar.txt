@@ -1,0 +1,14 @@
+1. Request verbs
+    POST   - Er fylki af breytum áframsent á núverandi kóða í gegnum HTTP POST aðferð.
+    GET    - Er fylki af breytum áframsent á núverandi kóða í gegnum URL breytur.
+    PUT    - Er notað hjá sumum til að geyma skrár á server.
+    DELETE - Er notað hjá sumum til að eyða skrám úr server.
+    
+2. Status codes
+    a) 200 - OK
+    b) 301 - Multiple Choices
+    c) 400 - Bad Request
+    d) 404 - Not Found
+    e) 500 - Internal Server Error
+    
+3. HTTP	request/response
