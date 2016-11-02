@@ -1,7 +1,7 @@
 <?php
 session_start();
 // if session variable not set, redirect to login page
-if (!isset($_SESSION['authenticated'])) {
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Lalli Mus') {
  header('Location: http://tsuts.tskoli.is/2t/1811992029/GSO_onn3/verkefni5/session.php');
  exit;
 }
@@ -44,25 +44,25 @@ if(isset($_GET['mynd'])){
             $img = "myndir/mynd5.jpg";
             $expire = time()+(60*60*24*7); // látum lifa í 1 viku.
             // búum til cookie til að senda með page request næst til miðlara
-            setcookie("pic1", $img, $expire);
+            setcookie("pic5", $img, $expire);
         }
         if($id == 6){
             $img = "myndir/mynd6.jpg";
             $expire = time()+(60*60*24*7); // látum lifa í 1 viku.
             // búum til cookie til að senda með page request næst til miðlara
-            setcookie("pic2", $img, $expire);
+            setcookie("pic6", $img, $expire);
         } 
         if($id == 7){
             $img = "myndir/mynd7.jpg";
             $expire = time()+(60*60*24*7); // látum lifa í 1 viku.
             // búum til cookie til að senda með page request næst til miðlara
-            setcookie("pic3", $img, $expire);
+            setcookie("pic7", $img, $expire);
         }
         if($id == 8){
             $img = "myndir/mynd8.jpg";
             $expire = time()+(60*60*24*7); // látum lifa í 1 viku.
             // búum til cookie til að senda með page request næst til miðlara
-            setcookie("pic4", $img, $expire);
+            setcookie("pic8", $img, $expire);
         }
 }
   

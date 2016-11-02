@@ -3,7 +3,7 @@
     if (isset($_POST['login'])) {
         session_start();
         if ($_POST["username"] == "admin" && $_POST["pwd"] == "1234") {
-            $_SESSION['authenticated'] = 'Jethro Tull';
+            $_SESSION['authenticated'] = 'Lalli Mus';
             session_regenerate_id();
             if (isset($_SESSION['authenticated'])) {
                 header('Location: http://tsuts.tskoli.is/2t/1811992029/GSO_onn3/verkefni5/index.php');

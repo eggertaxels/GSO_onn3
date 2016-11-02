@@ -170,7 +170,7 @@ input[type=email]:focus{
 }
 input[type=submit] {
     width: 100%;
-    background-color: #e8242b;
+    background-color: #e60808;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -187,3 +187,18 @@ textarea{
     max-width: 90%;
 }
 .error {color: #FF0000;}
+.ut input[type=submit]{
+    width: 20%;
+    background-color: #1400ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
+.nyskodad img{
+    width: 10%;
+}

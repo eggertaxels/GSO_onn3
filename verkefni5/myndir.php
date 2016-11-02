@@ -1,7 +1,7 @@
 <?php
 session_start();
 // if session variable not set, redirect to login page
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Jethro Tull') {
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Lalli Mus') {
  header('Location: http://tsuts.tskoli.is/2t/1811992029/GSO_onn3/verkefni5/session.php');
  exit;
 }
@@ -16,8 +16,9 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Jethro 
         <?php require './includes/header.php'; ?>
         
         <?php require($_SERVER['DOCUMENT_ROOT'] . "/2t/1811992029/GSO_onn3/verkefni4/includes/images.php"); ?>
-        <div>
+        <div class="nyskodad">
             <?php
+                $stack = array();
                 $output = "<h1>Nýlega skoðað</h1>";
                 $mynd = "";
                 echo $output;
@@ -26,26 +27,112 @@ if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Jethro 
                     // sækjum gildið úr cookie   
                     $mynd = $_COOKIE["pic1"]; 	   
                     // birtum mynd
-                    echo "<img src=\"{$mynd}\">"; 
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    } 
                 } 
                 if(isset($_COOKIE['pic2'])){
                     // sækjum gildið úr cookie   
                     $mynd = $_COOKIE["pic2"]; 	   
                     // birtum mynd
-                    echo "<img src=\"{$mynd}\">"; 
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    }
                 } 
                 if(isset($_COOKIE['pic3'])){
                     // sækjum gildið úr cookie   
                     $mynd = $_COOKIE["pic3"]; 	   
                     // birtum mynd
-                    echo "<img src=\"{$mynd}\">"; 
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    }
                 } 
                 if(isset($_COOKIE['pic4'])){
                     // sækjum gildið úr cookie   
                     $mynd = $_COOKIE["pic4"]; 	   
                     // birtum mynd
-                    echo "<img src=\"{$mynd}\">"; 
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    } 
+                }
+                if(isset($_COOKIE['pic5'])){
+                    // sækjum gildið úr cookie   
+                    $mynd = $_COOKIE["pic5"]; 	   
+                    // birtum mynd
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    }
                 } 
+                if(isset($_COOKIE['pic6'])){
+                    // sækjum gildið úr cookie   
+                    $mynd = $_COOKIE["pic6"]; 	   
+                    // birtum mynd
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    } 
+                } 
+                if(isset($_COOKIE['pic7'])){
+                    // sækjum gildið úr cookie   
+                    $mynd = $_COOKIE["pic7"]; 	   
+                    // birtum mynd
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd");
+                    }
+                } 
+                if(isset($_COOKIE['pic8'])){
+                    // sækjum gildið úr cookie   
+                    $mynd8 = $_COOKIE["pic8"]; 	   
+                    // birtum mynd
+                    if(count($stack) < 4)
+                    {
+                        array_unshift($stack, "$mynd8");
+                    }
+                    else{
+                        $fruit = array_pop($stack);
+                        array_unshift($stack, "$mynd8");
+                    } 
+                }
+                //print_r($stack);
+                $arrlength = count($stack);
+                natsort($stack);
+                for($x = 0; $x < $arrlength; $x++) {
+                    echo "<img src=\"{$stack[$x]}\">";
+                }
             ?>
         </div>
         <h1>Myndir</h1>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 // if session variable not set, redirect to login page
-if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Jethro Tull') {
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 'Lalli Mus') {
  header('Location: http://tsuts.tskoli.is/2t/1811992029/GSO_onn3/verkefni5/session.php');
  exit;
 }

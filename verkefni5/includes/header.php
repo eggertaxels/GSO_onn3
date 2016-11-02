@@ -26,3 +26,21 @@
         echo "<h1>Þú aftur? This site has been reloaded {$visits} times</h1>";
     }
 ?>
+<?php
+// run this script only if the logout button has been clicked
+if (isset($_POST['logout'])) {
+    // empty the $_SESSION array
+    $_SESSION = [];
+    // invalidate the session cookie
+    if (isset($_COOKIE[session_name()])) {
+        setcookie(session_name(), '', time()-86400, '/');
+    }
+    // end session and redirect
+    session_destroy();
+    header('Location: http://tsuts.tskoli.is/2t/1811992029/GSO_onn3/verkefni5/session.php');
+    exit;
+}
+?>
+<form class="ut" method="post" action="">
+ <input name="logout" type="submit" value="Log out">
+</form>
