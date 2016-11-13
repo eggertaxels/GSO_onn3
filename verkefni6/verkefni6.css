@@ -1,0 +1,32 @@
+header{
+    background-color: red;
+    height: 6em;
+    margin-bottom: 3em;
+}
+img{
+    height: 400px;
+    width: 50%;
+    border-radius: 6px;
+}
+.menu li{
+    text-decoration: none;
+    width: 40%;
+    border: 2px solid black;
+    list-style: none;
+    float: left;
+}
+.menu a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 3em;
+    text-align: center;
+}
+.menu a:hover{
+    color: black;
+    transition: .3s;
+    background-color: black;
+}
+.menu li:hover{
+    background-color: white;
+    transition: .3s;
+}
